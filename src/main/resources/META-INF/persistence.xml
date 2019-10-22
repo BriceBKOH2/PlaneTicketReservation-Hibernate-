@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence">
+
+   <persistence-unit name="unit">
+       <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+       <properties>
+           <property name="hibernate.hbm2ddl.auto" value="create" />
+           <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL9Dialect"/>
+           <property name="hibernate.connection.provider_class" value="org.hibernate.hikaricp.internal.HikariCPConnectionProvider"/>
+           <property name="hibernate.show_sql" value="true"/>
+           <property name="hibernate.format_sql" value="true"/>
+
+           <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/BDD_Aeroport"/>
+           <property name="javax.persistence.jdbc.user" value="postgres"/>
+           <property name="javax.persistence.jdbc.password" value="KilleroPG0"/>
+           <property name="hibernate.hikari.minimumIdle" value="5"/>
+           <property name="hibernate.hikari.maximumPoolSize" value="10"/>
+           <property name="hibernate.hikari.idleTimeout" value="30000"/>
+
+       </properties>
+   </persistence-unit>
+</persistence>
